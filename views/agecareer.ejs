@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연령별 진로</title>
+    <style>
+      body,
+      html,
+      main,
+      nav,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        user-select: none;
+      }
+
+      .div2 {
+        flex: 2.2;
+        position: relative;
+        border: 1px solid #acacac;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        margin-left: 150px;
+      }
+
+      .div1 {
+        width: 400px;
+        height: 86px;
+        position: absolute;
+        border: 1px solid #acacac;
+        z-index: 1;
+        left: 0;
+      }
+
+      .div1-1 {
+        font-size: 24px;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        position: absolute;
+      }
+
+      .div1-2 {
+        font-size: 15px;
+        top: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        white-space: nowrap;
+      }
+
+      .div2-1 {
+        font-size: 20px;
+        background-color: #effffd;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .cheld {
+        top: 255px;
+        left: 152px;
+        width: 289px;
+        height: 289px;
+        position: absolute;
+      }
+
+      .text {
+        font-weight: bold;
+        font-size: 40px;
+        top: 268px;
+        left: 475px;
+        position: absolute;
+      }
+
+      .text1 {
+        font-weight: bold;
+        font-size: 20px;
+        top: 325px;
+        left: 475px;
+        position: absolute;
+      }
+
+      .text2 {
+        font-weight: bold;
+        font-size: 20px;
+        top: 440px;
+        left: 475px;
+        position: absolute;
+      }
+
+      .box {
+        font-weight: bold;
+        font-size: 20px;
+        top: 440px;
+        left: 475px;
+        position: relative;
+      }
+
+      .div5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 403px;
+        height: 431px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 50px;
+        top: 309px;
+        right: 86px;
+        position: fixed;
+      }
+
+      .line-18 {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 1px 0 0 0;
+        width: 367.01px;
+        height: 0px;
+        position: fixed;
+        left: 69%;
+        top: 381px;
+        transform-origin: 0 0;
+        transform: translateX(-50%);
+        transform: rotate(0.468deg) scale(1, 1);
+      }
+
+      .div6 {
+        color: #000000;
+        text-align: center;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        bottom: 170px;
+        position: relative;
+      }
+      .rectangle-4180 {
+        background: #ffd700;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #acacac;
+        border-width: 1px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 37px;
+        bottom: 290px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .rectangle-4181 {
+        background: #c0c0c0;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #acacac;
+        border-width: 1px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 37px;
+        top: 155px;
+      }
+      .rectangle-4182 {
+        background: #000000;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #acacac;
+        border-width: 1px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 37px;
+        top: 280px;
+      }
+      .rectangle-4183 {
+        background: #000000;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #acacac;
+        border-width: 1px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 38px;
+        top: 340px;
+      }
+      .rectangle-4184 {
+        background: #b87333;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #acacac;
+        border-width: 1px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 37px;
+        top: 220px;
+      }
+      ._1 {
+        color: #ffffff;
+        text-align: center;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        -webkit-text-stroke: 0.5px #ffffff;
+        position: relative;
+        margin: 0;
+      }
+      ._5 {
+        color: #ffffff;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 995px;
+        top: 686px;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+      ._4 {
+        color: #ffffff;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 994px;
+        top: 614px;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+      ._3 {
+        color: #ffffff;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 995px;
+        top: 543px;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+      ._2 {
+        color: #ffffff;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 995px;
+        top: 472px;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+      .div7 {
+        color: #000000;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 105px;
+        top: 105px;
+      }
+      .div8 {
+        color: #000000;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 105px;
+        top: 355px;
+      }
+      .div9 {
+        color: #000000;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 105px;
+        top: 293px;
+      }
+      .div10 {
+        color: #000000;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 105px;
+        top: 235px;
+      }
+      .div11 {
+        color: #000000;
+        text-align: left;
+        font-family: "Inter-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: 105px;
+        top: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('header.ejs')%>
+    <nav class="header" style="background-color: #EFFFFD">
+      <div class="div1">
+        <div class="div1-1">연령별 진로</div>
+        <div class="div1-2">
+          초등학생부터 노인분들까지 이제는 시대 상관없이
+          <br />
+          진로를 찾을 수 있습니다!
+        </div>
+      </div>
+      <div class="div2">
+        <div class="div2-1">초등학생</div>
+        <div class="div2-1">중학생</div>
+        <div class="div2-1">고등학생</div>
+        <div class="div2-1">대학생</div>
+        <div class="div2-1">노인</div>
+      </div>
+    </nav>
+
+    <img src="https://i.ibb.co/CH2fZ54/Kakao-Talk-20240826-155958604-05.png" class="cheld" />
+    <div class="text">초등학생</div>
+    <div class="text1">
+      학생들이 다양한 경험을 통해 자신의 흥미와 적성을 탐<br />
+      색하는 시기로, 진로 교육은 학생들에게 미래의 직업에<br />
+      대한 긍정적인 인식을 심어주는 데 중요한 역할을 하여<br />
+      야 합니다.
+    </div>
+    <div class="text2">
+      목표와 방법<br />
+      1.자기 이해와 탐색<br />
+      2.직업 세계의 이해<br />
+      3.진로 탐색 활동<br />
+      4.부모와의 협력<br />
+      5.진로 교육 프로그램<br />
+    </div>
+    <div class="div5">
+      <div class="div6">희망 직업 순위</div>
+      <div class="rectangle-4180"><img src="https://i.ibb.co/N9Bbzkn/Kakao-Talk-20240826-155958604.png"></div>
+      <div class="rectangle-4181"><img src="https://i.ibb.co/VjHChCQ/Kakao-Talk-20240826-155958604-01.png"></div>
+      <div class="rectangle-4182"><img src="https://i.ibb.co/QC6cFN6/Kakao-Talk-20240826-155958604-03.png"></div>
+      <div class="rectangle-4183"><img src="https://i.ibb.co/1z6B9H2/Kakao-Talk-20240826-155958604-04.png"></div>
+      <div class="rectangle-4184"><img src="https://i.ibb.co/qymkmFt/Kakao-Talk-20240826-155958604-02.png"></div>
+      <div class="_1">1</div>
+      <div class="_5">5</div>
+      <div class="_4">4</div>
+      <div class="_3">3</div>
+      <div class="_2">2</div>
+      <div class="div7">운동선수</div>
+      <div class="div8">요리사 / 조리사</div>
+      <div class="div9">크리에이터</div>
+      <div class="div10">교사</div>
+      <div class="div11">의사</div>
+    </div>
+    <div class="line-18"></div>
+  </body>
+</html>

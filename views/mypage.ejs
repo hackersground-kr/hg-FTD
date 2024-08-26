@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html,
+      main {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+      }
+
+      .circle {
+        top: 142px;
+        left: 106px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url("./image/image.png");
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid #000000;
+      }
+
+      .button-container {
+        left: 108px;
+        top: 351px;
+        display: flex;
+        gap: 17px;
+        position: absolute;
+      }
+
+      .button3 {
+        width: 90px;
+        height: 35px;
+        border-radius: 10px;
+        border: 1px solid #acacac;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #000000;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .button3:hover {
+        background-color: #f5f5f5;
+      }
+
+      .input-box {
+        position: absolute;
+        left: 400px;
+        top: 180px;
+        width: 550px;
+        height: 300px;
+        padding: 10px;
+        border: 2px solid #000000;
+        background-color: #ffffff;
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 18px;
+        color: #000000;
+        resize: none;
+      }
+
+      .input-box:focus {
+        outline: none;
+      }
+
+      .input-box::placeholder {
+        font-weight: bold;
+        color: #acacac;
+        font-size: 15px;
+        position: absolute;
+        left: 10px;
+      }
+
+      .text {
+        top: 393px;
+        left: 153px;
+        position: absolute;
+        color: #acacac;
+        font-size: 10px;
+      }
+
+      .text2 {
+        top: 110px;
+        left: 575px;
+        position: absolute;
+        color: #000000;
+        font-size: 40px;
+      }
+
+      .input-box2 {
+        width: 470px;
+        height: 50px;
+        right: 50px;
+        top: 150px;
+        border: 2px solid #acacac;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+      }
+
+      .label {
+        font-size: 24px;
+        right: 450px;
+        top: 110px;
+        position: absolute;
+      }
+
+      .input-box3 {
+        width: 470px;
+        height: 50px;
+        right: 50px;
+        top: 270px;
+        border: 2px solid #acacac;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+      }
+
+      .label2 {
+        font-size: 24px;
+        right: 450px;
+        top: 230px;
+        position: absolute;
+      }
+
+      .input-box4 {
+        width: 470px;
+        height: 50px;
+        right: 50px;
+        top: 390px;
+        border: 2px solid #acacac;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+      }
+
+      .label3 {
+        font-size: 24px;
+        right: 425px;
+        top: 350px;
+        position: absolute;
+      }
+
+      .input-box5 {
+        width: 470px;
+        height: 50px;
+        right: 50px;
+        top: 510px;
+        border: 2px solid #acacac;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+      }
+
+      .label4 {
+        font-size: 24px;
+        right: 370px;
+        top: 470px;
+        position: absolute;
+      }
+
+      .button4 {
+        top: 430px;
+        left: 150px;
+        width: 120px;
+        height: 40px;
+        border-radius: 10px; /* 둥근 모서리 */
+        border: 1px solid #acacac; /* 테두리 색상 */
+        background-color: #ffffff; /* 배경색 */
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #000000;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .button5 {
+        top: 500px;
+        left: 150px;
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid #acacac;
+        background-color: #ffffff;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #ff0000;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .Line20 {
+        position: absolute;
+        width: 1800px;
+        height: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 850px;
+        border: 1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('header.ejs')%>
+    <main>
+      <div class="circle"></div>
+      <section class="button-container">
+        <div class="button3" type="button">이미지 업로드</div>
+        <div class="button3" type="button">사진 제거</div>
+      </section>
+      <div class="text">최소 사이즈 200 x 200px</div>
+      <textarea class="input-box" placeholder="자기 소개글"></textarea>
+      <div class="text2">마이 페이지</div>
+    </main>
+    <div class="rectangle"></div>
+    <div class="container">
+      <div class="label">사용자</div>
+      <input type="text" class="input-box2" placeholder="이름" />
+
+      <div class="label2">이메일</div>
+      <input type="text" class="input-box3" placeholder="이메일" />
+
+      <div class="label3">비밀번호</div>
+      <input class="input-box4" type="password" placeholder="비밀번호" />
+
+      <div class="label4">비밀번호 변경</div>
+      <input class="input-box5" type="password" placeholder="비밀번호변경" />
+    </div>
+    <div class="button4" type="button">수정</div>
+    <div class="button5" type="button">계정탈퇴</div>
+    <div class="Line20"></div>
+  </body>
+</html>

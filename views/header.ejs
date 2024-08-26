@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career On Animation</title>
+    <style>
+        .subtitle-container {
+            position: relative;
+            overflow: hidden;
+            height: 0;
+            opacity: 0;
+            z-index: 2;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .headercontainer:hover .subtitle-container {
+            height: 30px;
+            transform: translateY(-19px);
+            opacity: 1;
+
+        }
+
+        .subtitle {
+            font-size: 12px;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            z-index: 3;
+            color: black;
+            transform: translateY(0);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .headercontainer:hover .subtitle {
+            opacity: 1;
+        }
+
+        body,
+        html,
+        main,
+        nav,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .headercontainer {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            z-index: 10;
+            cursor: pointer;
+            transition: color 0.25s ease;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            color: black;
+            transition: transform 0.5s ease;
+        }
+
+        .headercontainer:hover .title {
+            transform: translateY(-10px);
+        }
+
+        .line {
+            margin: 5px auto;
+            width: 40%;
+            border-top: 1px solid black;
+            transition: transform 0.5s ease;
+            z-index: 1;
+        }
+
+        .headercontainer:hover .line {
+            transform: translateY(-15px);
+        }
+
+        .header {
+            display: flex;
+            height: 88px;
+            border: 1px solid #ACACAC;
+            position: relative;
+            padding-left: 250px;
+        }
+
+        .header .line {
+            width: 1px;
+            height: 40px;
+            left: 250px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ACACAC;
+        }
+
+        .button,
+        .button2 {
+            font-size: 16px;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 35px;
+            margin-right: 35px;
+        }
+
+        .button {
+            left: 285px;
+        }
+
+        .button2 {
+            left: 475px;
+        }
+
+        .me {
+            width: 53px;
+            height: 53px;
+            right: 19px;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        .signup {
+            font-size: 14px;
+            color: #ACACAC;
+            cursor: pointer;
+            position: absolute;
+            text-decoration: none;
+            top: 50%;
+            right: 81px;
+            transform: translateY(-50%);
+        }
+
+        .login {
+            font-size: 14px;
+            color: #ACACAC;
+            cursor: pointer;
+            position: absolute;
+            text-decoration: none;
+            top: 50%;
+            right: 149px;
+            transform: translateY(-50%);
+        }
+
+        .search {
+            font-size: 16px;
+            width: 220px;
+            height: 50px;
+            border-radius: 25px;
+            right: 207px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            padding: 0px 20px;
+            background-color: #ffffff;
+            border: 1px solid #ACACAC;
+        }
+
+        .logo-hover-area {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            width: 100px;
+            height: 100px;
+            z-index: 5;
+        }
+
+        .logo-hover-area:hover+.container .subtitle-container {
+            height: 30px;
+            transform: translateY(-19px);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headercontainer" id="headercontainer">
+        <p class="title">CAREER ON</p>
+        <div class="line"></div>
+        <div class="subtitle-container">
+            <p class="subtitle">A career path<br>Reveals your potential</p>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="line"></div>
+        <a href="/counseling" class="button">온라인 진로상담</a>
+        <a href="/agecareer" class="button2">연령별 진로</a>
+        <a href="/mypage"><img src="https://i.ibb.co/kKWBphb/Kakao-Talk-20240826-155958604-11.png" class="me"></a>
+        <a href="/signup" class="signup">회원가입</a>
+        <a href="/login" class="login">로그인</a>
+        <input type="text" class="search" placeholder="검색">
+    </header>
+
+    <script>
+        document.getElementById('headercontainer').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+
+</html>

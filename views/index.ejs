@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career ON</title>
+    <style>
+        body, html, main {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        .box {
+            position: relative; 
+            width: 1368px;
+            height: 500px;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            background: #000000;
+        }
+        
+        #slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slideshow img.active {
+            opacity: 1;
+        }
+
+        .line2 {
+            position: relative;
+            width: 1383px;
+            height: 0px;
+            left: 50%;
+            top: 0px; 
+            transform: translateX(-50%);
+            border: 1px solid #000000;
+            margin-top: 80px;
+        }
+
+        .image1 {
+            width: 383px;   
+            height: auto;  
+            margin: 29px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: flex-start;
+            margin: 5px;
+        }
+        
+        .link-text {
+            color: #000000;
+            width: 383px;
+            font-size: 24px;
+            margin: 5px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .content {
+            color: #ACACAC;
+            width: 383px;
+            font-size: 15px;
+            margin: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .mini {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line3 {
+            position: absolute;
+            width: 1383px;
+            height: 0px;
+            left: 34px;
+            top: 1550px;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <%-include('header.ejs')%>
+    <main>
+        <section class="box">
+            <div id="slideshow">
+                <img src="https://i.ibb.co/68HxLfq/Kakao-Talk-20240826-155958604-08.jpg" class="active" alt="슬라이드 이미지 1">
+                <img src="https://i.ibb.co/020pp71/Kakao-Talk-20240826-155958604-09.jpg" alt="슬라이드 이미지 2">
+                <img src="https://i.ibb.co/rMQTCkV/Kakao-Talk-20240826-155958604-10.jpg" alt="슬라이드 이미지 3">
+            </div>
+        </section>
+        <div class="line2"></div>
+        <section>
+            <article class="image-container">
+
+                <div class="mini">
+                    <img src="https://i.ibb.co/0Cmf5ps/Kakao-Talk-20240826-162326961.jpg" class="image1">
+                    <a href="http://www.ksmnews.co.kr/news/view.php?idx=496470" class="link-text">
+                        의성청소년상담복지센터, 진로체험 캠프
+                    </a>
+                    <div class="content">
+                        의성군청소년상담복지센터는 지난 9일 지역청소년과 가톨릭 상지대생 36명이 함께 1박 2일간 대전시, 서울시 일원으로 멘토-멘티 하절기 진로체험을 실시해 호응을 얻었다.
+                    </div>
+                </div>
+
+                <div class="mini">
+                    <img src="https://i.ibb.co/kmx0cd0/Kakao-Talk-20240826-162331483.jpg" class="image1">
+                    <a href="https://www.hkbs.co.kr/news/articleView.html?idxno=650557" class="link-text">
+                        의성군, 진로 토크 콘서트 개최
+                    </a>
+                    <div class="content">
+                        의성=환경일보 정순기 기자 = 의성군은 지역 내 중·고등학생을 대상으로 진로에 대한 폭 넓은 탐색의 기회를 제공하기 위해 지난 9월 6일 의성고를 시작으로 삼성중, 의성중, 안계중학교에서 ‘2021년 청소년 공감 진로토크 콘서트’를 진행했다
+                    </div>
+                </div>
+
+                <div class="mini">
+                    <img src="https://i.ibb.co/3WRtnwK/Kakao-Talk-20240826-162413683.jpg" class="image1">
+                    <a href="http://www.kbsm.net/news/view.php?idx=250973" class="link-text">
+                        의성군, 고교생 `경찰진로·직업체험 캠프` 성황리 마쳐
+                    </a>
+                    <div class="content">
+                        의성군 청소년상담복지센터는 의성경찰서와 함께 지난 8일, 지역 고등학생 30여 명을 대상으로 '미래폴(POL) 나만의 P(police). D(dream). 수첩을 펼쳐라!'라는 경찰진로·직업체험 캠프를 진행했다.
+                    </div>
+                </div>
+                    
+                </div>
+            </article>
+        </section>
+        <div class="line3"></div>
+    </main>
+
+    <script>
+        window.addEventListener('load', () => {
+            const images = document.querySelectorAll('#slideshow img');
+            let currentIndex = 0;
+            const totalImages = images.length;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalImages;
+                images[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextImage, 5000);
+        });
+    </script>
+</body>
+</html>

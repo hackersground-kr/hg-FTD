@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FP</title>
+  <style>
+    body,
+    html,
+    main {
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    .box {
+      width: 866px;
+      height: 589px;
+      background-color: #ffffff;
+      border: 1px solid #d3d3d3;
+      border-radius: 50px;
+      margin: 70px auto 0;
+      position: relative;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    .title2 {
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .line {
+      width: 823px;
+      height: 1px;
+      background-color: #000000;
+      position: absolute;
+      top: 99px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .button {
+      font-size: 12px;
+      font-weight: bold;
+      border: none;
+      width: 114px;
+      height: 32px;
+      background-color: #A0E9FF;
+      position: absolute;
+      top: 368px;
+      left: 50%;
+      border-radius: 10px;
+      cursor: pointer;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .input {
+      width: 290px;
+      height: 20px;
+      border: none;
+      border-bottom: 1px solid #000000;
+      background-color: transparent;
+      font-size: 16px;
+      position: absolute;
+      top: 189px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-left: 7px;
+    }
+
+    .input:focus {
+      outline: none;
+    }
+
+    .input2 {
+      width: 290px;
+      height: 20px;
+      border: none;
+      border-bottom: 1px solid #000000;
+      background-color: transparent;
+      font-size: 16px;
+      position: absolute;
+      top: 258px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-left: 7px;
+    }
+
+    .input2:focus {
+      outline: none;
+    }
+
+    .input3 {
+      width: 290px;
+      height: 20px;
+      border: none;
+      border-bottom: 1px solid #000000;
+      background-color: transparent;
+      font-size: 16px;
+      position: absolute;
+      top: 330px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-left: 7px;
+    }
+
+    .input3:focus {
+      outline: none;
+    }
+
+    .back {
+      font-size: 15px;
+      color: #ACACAC;
+      cursor: pointer;
+      position: absolute;
+      text-decoration: none;
+      top: 77px;
+      left: 25px;
+    }
+
+    .make {
+      font-size: 10px;
+      color: #ACACAC;
+      cursor: pointer;
+      position: absolute;
+      text-decoration: none;
+      top: 406px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    .make2 {
+      font-size: 16px;
+      font-weight: bold;
+      position: absolute;
+      top: 448px;
+      left: 50%;
+      z-index: 1;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: white;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    .line2 {
+      width: 823px;
+      height: 1px;
+      background-color: #000000;
+      position: absolute;
+      top: 460px;
+      left: 21px;
+    }
+
+    .button2 {
+      border-radius: 10px;
+      width: 160px;
+      height: 46px;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 489px;
+      background-image: url('https://i.ibb.co/0GW2z8F/Kakao-Talk-20240826-155958604-06.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+    }
+  </style>
+</head>
+
+<body style="background-color: #EFFFFD">
+  <div class="box">
+    <p class="title">회원가입</p>
+    <a href="/" class="back">< 돌아가기</a>
+    <div class="line"></div>
+    <p class="title2">"진로는 당신의 가능성을 발견하는 과정입니다."</p>
+    <form action="/signupform" method="post">
+      <input type="text" class="input" name="username" placeholder="사용자명">
+      <input type="password" class="input2" name="password" placeholder="비밀번호">
+      <input type="password" class="input3" name="passwordConfirm" placeholder="비밀번호 확인">
+      <button type="submit" class="button">회원가입</button>
+    </form>
+    <a href="/login" class="make">계정이 이미 있습니다.</a>
+    <div class="make2">간편로그인</div>
+    <div class="line2"></div>
+    <button class="button2"></button>
+  </div>
+</body>
+</html>
